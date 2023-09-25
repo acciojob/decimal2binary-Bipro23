@@ -1,8 +1,22 @@
-def decimal_to_binary(decimal_number):
-    binary_number = bin(decimal_number)
-    return binary_number[2:]
+function convertToBinary(x) {
+    let bin = 0;
+    let rem, i = 1, step = 1;
+    while (x != 0) {
+        rem = x % 2;
+        console.log(
+            `Step ${step++}: ${x}/2, Remainder = ${rem}, Quotient = ${parseInt(x/2)}`
+        );
+        x = parseInt(x / 2);
+        bin = bin + rem * i;
+        i = i * 10;
+    }
+    console.log(`Binary: ${bin}`);
 
-# Example Usage
-input_number = int(input("Enter a decimal number: "))
-binary_equivalent = decimal_to_binary(input_number)
-print(f"The binary equivalent of {input_number} is: {binary_equivalent}")
+convertToBinary(number);
+	
+	
+
+	
+}
+
+// window.decimalToBinary = decimalToBinary;
